@@ -32,7 +32,7 @@ export default async function handler(req, res) {
 
   try {
     const db = await connectToDatabase();
-    const collection = db.collection('Dexscreener');
+    const collection = db.collection('Adresses');
     const data = req.body;
     await collection.insertOne(data);
     res.status(200).json({ message: 'Data saved successfully' });
